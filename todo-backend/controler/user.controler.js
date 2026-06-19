@@ -17,7 +17,8 @@ export const createuser=async(req,res)=>{
 res.json({token:token})
     }
     catch(error){
-        return res.status(401).json(error)
+        console.log(error)
+        return res.status(401).json({message:error.message})
     }
 }
 
